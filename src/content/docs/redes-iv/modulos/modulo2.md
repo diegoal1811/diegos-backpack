@@ -198,11 +198,17 @@ Neighbor ID Pri State Dead Time Address Interface
 3.3.3.3 1 FULL/DR  00:00:34 192.168.1.3 GigabitEthernet0/0/0
 R2#
 ```
+### Estados OSPF que puedes ver en "State"
 
-- FULL/DROTHER.
-- FULL/.
-- FULL/BDR.
-- 2-WAY/.
+| **Estado**   | **Significado** |
+|-------------|----------------|
+| **FULL**    | Adyacencia completa; los routers han intercambiado sus LSDB y están en operación normal. |
+| **2WAY**    | Los routers han intercambiado paquetes Hello pero no formaron adyacencia completa (se da en DROTHERs). |
+| **EXSTART** | Se inicia el intercambio de bases de datos. |
+| **EXCHANGE** | Intercambio de DBDs (Database Description). |
+| **LOADING**  | Solicitud y actualización de LSAs. |
+| **DOWN**    | No se ha recibido un Hello dentro del tiempo "Dead Time". |
+
 
 ---
 ## Elección de DR y BDR
