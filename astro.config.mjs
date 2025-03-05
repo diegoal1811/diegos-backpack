@@ -21,6 +21,10 @@ export default defineConfig({
 					label: 'Sistemas inteligentes',
 					autogenerate: { directory: 'sistemas-inteligentes' },
 				},
+				{
+					label: 'Redes IV',
+					autogenerate: { directory: 'redes-iv' },
+				}
 			],
 		}),
 	],
