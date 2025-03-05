@@ -75,7 +75,7 @@ Las opciones de diseño de topología jerárquica con OSPF multi-área pueden of
 
 - Sobrecarga de actualizaciones de estado de enlace reducida - el diseño de OSPF multi-área con áreas más pequeñas minimiza el procesamiento y los requisitos de memoria.
 
-- Menor frecuencia de cálculos de SPF -– Multi-área OSPF localiza el impacto de un cambio de topología dentro de un área. Por ejemplo, minimiza el impacto de las actualizaciones de routing debido a que la saturación con LSA se detiene en el límite del área.
+- Menor frecuencia de cálculos de SPF -– Multi-área OSPF localiza el impacto de un cambio de topología dentro de un área. Por ejemplo, minimiza el impacto de las actualizaciones de routing debido a que la saturación con  se detiene en el límite del área.
 
 ----
 ### OSPF V3
@@ -104,7 +104,7 @@ OSPFv3 tiene procesos diferentes de los de su equivalente de IPv4. Los procesos 
 >Controla la sincronización de bases de datos entre routers.
 
 - Se utiliza para intercambiar información sobre la base de datos de estado de enlace (LSDB) entre routers.
-- Contiene resúmenes de los registros LSA que tiene el router que envía el paquete.
+- Contiene resúmenes de los registros  que tiene el router que envía el paquete.
 - Permite que los routers vecinos sincronicen sus LSDB.
 
 ### 3. Paquete Link State Request (LSR):
@@ -112,17 +112,17 @@ OSPFv3 tiene procesos diferentes de los de su equivalente de IPv4. Los procesos 
 >Solicita registros específicos de estado de enlace de router a router.
 
 - Se utiliza para solicitar información específica de la LSDB a un router vecino.
-- Cuando un router detecta que le falta algún registro LSA, envía un paquete LSR para obtenerlo.
+- Cuando un router detecta que le falta algún registro , envía un paquete LSR para obtenerlo.
 
 ### 4. Paquete Link State Update (LSU):
 
 >Envía los registros de estado de enlace específicamente solicitados.
 
-- Se utiliza para enviar registros LSA a los routers vecinos.
+- Se utiliza para enviar registros  a los routers vecinos.
 - Contiene uno o más registros LSA que describen el estado de los enlaces.
 - Permite que los routers actualicen su LSDB con la información recibida.
 
-### 5. Paquete Link State Acknowledgment (LSA):
+### 5. Paquete Link State Acknowledgment (LSAck):
 
 >Reconoce los demás tipos de paquetes.
 
